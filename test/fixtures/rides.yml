@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  rider_name: MyString
+  duration: 2010-03-21 22:02:18
+  distance: 1.5
+  average_speed: 1.5
+  max_speed: 1.5
+
+two:
+  rider_name: MyString
+  duration: 2010-03-21 22:02:18
+  distance: 1.5
+  average_speed: 1.5
+  max_speed: 1.5

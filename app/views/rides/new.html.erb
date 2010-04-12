@@ -1,0 +1,31 @@
+<h1>New ride</h1>
+
+<% form_for(@ride) do |ride_form| %>
+  <%= ride_form.error_messages %>
+
+  <p>
+    <%= ride_form.label :duration %><br />
+    <%= ride_form.text_field :duration %>
+  </p>
+  <p>
+    <%= ride_form.label :distance %><br />
+    <%= ride_form.text_field :distance %>
+  </p>
+  <p>
+    <%= ride_form.label :average_speed %><br />
+    <%= ride_form.text_field :average_speed %>
+  </p>
+  <p>
+    <%= ride_form.label :max_speed %><br />
+    <%= ride_form.text_field :max_speed %>
+  </p>
+  <p>
+    <%= ride_form.label :comments %><br />
+    <%= ride_form.text_area :comments %>
+  </p>
+  <p>
+    <%= ride_form.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', rides_path %>

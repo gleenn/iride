@@ -1,0 +1,43 @@
+<h1><%=h @trail.name %></h1>
+
+
+<%= link_to 'Edit', edit_trail_path(@trail) %> |
+<%= link_to 'Back', trails_path %>
+
+  <div style="width: 512px; text-align: center">Add points by clicking on the map or entering an address</div>
+  <div id="map_canvas" style="border: 1px solid black; width:512px; height:400px"></div>
+  <!--
+  <table style="width:512px;">
+  <tr>
+    <td>Address: <input type="text" id="address" size="15" onkeypress="return addressKeyHandler(event)"/></td>
+    <td style="text-align: center">
+      Mode of travel:
+      <select id="mode" onchange="updateElevation()">
+        <option value="direct">Direct</option>
+        <option value="driving">Driving</option>
+        <option value="bicycling">Bicycling</option>
+        <option value="walking">Walking</option>
+      </select>
+    </td>
+    <td style="text-align: right">
+      <input type="button" value="Clear points" onclick="reset()"/>
+    </td>
+  </tr>
+  </table>
+  -->
+  <!--
+  <table style="width:512px; font-size: small;">
+    <tr>
+      <td style="text-align: center"><a href="#" onclick="loadExample(1); return false">Mount Everest</a></td>
+      <td style="text-align: center"><a href="#" onclick="loadExample(2); return false">Challenger Deep</a></td>
+      <td style="text-align: center"><a href="#" onclick="loadExample(3); return false">Death Valley</a></td>
+      <td style="text-align: center"><a href="#" onclick="loadExample(4); return false">Grand Canyon</a></td>
+      <td style="text-align: center"><a href="#" onclick="loadExample(5); return false">Uluru</a></td>
+    </tr>
+  </table>
+  -->
+  <!--
+  <div id="chart_div" style="width:512px; height:200px" onmouseout="clearMouseMarker()"></div>
+  -->
+</body>
+</html>

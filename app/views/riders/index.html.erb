@@ -1,0 +1,24 @@
+<h1>Listing riders</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Password</th>
+  </tr>
+
+<% @riders.each do |rider| %>
+  <tr>
+    <td><%=h rider.first_name %></td>
+    <td><%=h rider.last_name %></td>
+    <td><%=h rider.password %></td>
+    <td><%= link_to 'Show', rider %></td>
+    <td><%= link_to 'Edit', edit_rider_path(rider) %></td>
+    <td><%= link_to 'Destroy', rider, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New rider', rider_path %>

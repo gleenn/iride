@@ -1,0 +1,22 @@
+<h1>Listing Trail Points for <%= @trail.name.capitalize %></h1>
+
+<table>
+  <tr>
+    <th>Latitude</th>
+    <th>Longitude</th>
+  </tr>
+
+<% @trail_points.each do |trail_point| %>
+  <tr>
+    <td><%=h trail_point.lat %></td>
+    <td><%=h trail_point.long %></td>
+    <td><%= link_to 'Show', url_for([@trail, trail_point]) %></td>
+    <td><%= link_to 'Edit', url_for([@trail, trail_point]) %></td>
+    <td><%= link_to 'Destroy', url_for([@trail, trail_point]), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New trail point', new_trail_trail_point_path(@trail) %>

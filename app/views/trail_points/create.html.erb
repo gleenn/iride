@@ -1,0 +1,14 @@
+<h1>Created new trail point for <%= @trail.name.capitalize %></h1>
+
+<p>
+  <b>Latitude</b>
+  <%=h @trail_point.lat %>
+</p>
+
+<p>
+  <b>Longitude</b>
+  <%=h @trail_point.long %>
+</p>
+
+<%#= link_to 'Edit', edit_trail_trail_point_path(@trail, @trail_point) %>
+<%= link_to 'Back', trail_trail_points_path(@trail, @trail_point) %>

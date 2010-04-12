@@ -1,0 +1,18 @@
+<p>
+  <b>First name:</b>
+  <%=h @rider.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @rider.last_name %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @rider.password %>
+</p>
+
+
+<%= link_to 'Edit', edit_rider_path(@rider) %> |
+<%= link_to 'Back', riders_path %>

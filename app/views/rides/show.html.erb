@@ -1,0 +1,33 @@
+<p>
+  <b>Rider:</b>
+  <%=h @ride.user.login %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%=h @ride.duration %>
+</p>
+
+<p>
+  <b>Distance:</b>
+  <%=h @ride.distance %>
+</p>
+
+<p>
+  <b>Average speed:</b>
+  <%=h @ride.average_speed %>
+</p>
+
+<p>
+  <b>Max speed:</b>
+  <%=h @ride.max_speed %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%=h @ride.comments %>
+</p>
+
+
+<%= link_to 'Edit', edit_ride_path(@ride) %> |
+<%= link_to 'Back', rides_path %>
