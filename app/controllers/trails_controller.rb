@@ -17,7 +17,7 @@ class TrailsController < ApplicationController
       format.html # new.html.erb
       format.js do
         jelly_callback do
-          render :text => "moo" #:js => @trail.trail_points
+          @trail.trail_points.to_json
         end
       end
     end

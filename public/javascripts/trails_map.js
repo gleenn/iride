@@ -103,7 +103,7 @@ function initialize() {
   });
   */
 
-  loadExample(0);
+  //loadExample(0);
 }
 
 // Takes an array of ElevationResult objects, draws the path on the map
@@ -299,15 +299,15 @@ function addressKeyHandler(e) {
   }
 }
 
-function loadExample(n) {
+function loadData(data) {
   reset();
-  map.setMapTypeId(examples[n].mapType);
+  map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
   //document.getElementById('mode').value = examples[n].travelMode;
   var bounds = new google.maps.LatLngBounds();
-  for (var i = 0; i < examples[n].latlngs.length; i++) {
+  for (var i = 0; i < data.length; i++) {
     var latlng = new google.maps.LatLng(
-      examples[n].latlngs[i][0],
-      examples[n].latlngs[i][1]
+      data[i]["trail_point"]["lat"],
+      data[i]["trail_point"]["long"]
     );
     addMarker(latlng, false);
     bounds.extend(latlng);

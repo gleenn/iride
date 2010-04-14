@@ -2,20 +2,18 @@ Jelly.Pages.add("Trails", {
 
   show: function() {
     var trailId = getTrailId();
-    alert(trailId);
     $.ajaxWithJelly({
       url: "/trails/"+trailId+"?format=js"});
   },
 
-  on_show_trail_points: function() {
-    alert("in on_show");
+  on_show: function(trail_points) {
+    //alert(trail_points);
+    loadData(JSON.parse(trail_points));
   }
 });
 
 var getTrailId = function() {
-  alert(window.location);
-  alert(window.location.toString().match(/\d+/));
-  return window.location.toString().match(/[0-9]+/);
+  return window.location.toString().match(/\d+/g)[1];
 }
 
 var getTrailIdFancy = function() {
