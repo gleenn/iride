@@ -3,3 +3,4 @@ class Trail < ActiveRecord::Base
     TrailPoint.find_all_by_trail_id(id)
   end
 end
+

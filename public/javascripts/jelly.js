@@ -157,3 +157,4 @@ $.extend(Jelly, {
 Jelly.add = Jelly.Pages.add; // Deprecated
 
 Jelly.init();
+

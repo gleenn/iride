@@ -27,3 +27,4 @@ class TrailPointsController < ApplicationController
     @trail = Trail.find_by_user_id_and_id(current_user.id, params[:trail_id])
   end
 end
+

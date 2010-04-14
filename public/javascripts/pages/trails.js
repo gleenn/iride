@@ -28,3 +28,4 @@ var genArrAccum = function() {
   var accum = function(results) { return function(e) { results.push(e); return results } };
   return accum([]);
 }
+

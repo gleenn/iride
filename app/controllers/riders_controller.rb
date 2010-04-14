@@ -85,3 +85,4 @@ class RidersController < ApplicationController
     end
   end
 end
+

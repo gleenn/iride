@@ -330,3 +330,4 @@ function reset() {
   
   //document.getElementById('chart_div').style.display = 'none';
 }
+
