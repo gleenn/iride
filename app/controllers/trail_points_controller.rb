@@ -8,8 +8,17 @@ class TrailPointsController < ApplicationController
   end
 
   def new
-    @trail_point = TrailPoint.new
-    @trail_point.trail = @trail
+      respond_to do |format|
+      format.html do
+        @trail_point = TrailPoint.new
+        @trail_point.trail = @trail
+      end
+      format.js do
+        jelly_callback do
+          @trail.trail_points.to_json
+        end
+      end
+    end
   end
   
   def create
