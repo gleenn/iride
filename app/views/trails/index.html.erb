@@ -13,7 +13,7 @@
   </tr>
   <tr>
     <th>Trail Points<br/><%= link_to 'Add Trail Points', new_trail_trail_point_path(trail) %></th>
-    <td><%= trail.trail_points.map{|tp| "(#{tp.lat}, #{tp.long})"}.join(" ") %>
+    <td><%= trail_points_with_delete_links(trail) %>
   </tr>
 <% end %>
 </table>

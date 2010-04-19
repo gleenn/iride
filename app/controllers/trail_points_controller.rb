@@ -6,9 +6,13 @@ class TrailPointsController < ApplicationController
   def index
     @trail_points = @trail.trail_points
   end
+  
+  def show
+    @trail_point = TrailPoint.find(params[:id])
+  end
 
   def new
-      respond_to do |format|
+    respond_to do |format|
       format.html do
         @trail_point = TrailPoint.new
         @trail_point.trail = @trail
@@ -26,8 +30,17 @@ class TrailPointsController < ApplicationController
   end
   
   def destroy
-    @trail_point = TrailPoint.find_by_trail_id_and_id(@trail.id, params[:trail_point_id])
-    @trail_point.destroy
+    respond_to do |format|
+      format.html do
+        @trail_point = TrailPoint.find_by_trail_id_and_id(@trail.id, params[:id])
+        @trail_point.destroy
+        redirect_to trails_path
+      end
+      format.js do
+        jelly_callback do
+          
+        end
+      end
   end
   
   protected
