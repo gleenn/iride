@@ -8,7 +8,7 @@ Jelly.Pages.add("Trails", {
 
   on_show: function(trail_points) {
     //alert(trail_points);
-    loadData(JSON.parse(trail_points));
+    TrailMap.loadData(JSON.parse(trail_points));
   }
 });
 
@@ -26,4 +26,3 @@ var genArrAccum = function() {
   var accum = function(results) { return function(e) { results.push(e); return results } };
   return accum([]);
 }
-

@@ -1,5 +1,8 @@
 <h1><%=h @trail.name %></h1>
 
+<% content_for :script do %>
+  <% attach_javascript_component('TrailMap') %>
+<% end %>
 
 <%= link_to 'Edit', edit_trail_path(@trail) %> |
 <%= link_to 'Back', trails_path %>
@@ -38,6 +41,7 @@
   -->
   <!--
   <div id="chart_div" style="width:512px; height:200px" onmouseout="clearMouseMarker()"></div>
-  -->
+
 </body>
 </html>
+  -->
