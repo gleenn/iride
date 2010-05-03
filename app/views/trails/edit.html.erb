@@ -12,5 +12,26 @@
   </p>
 <% end %>
 
+<% unless @trail.trail_points.empty? -%>
+<table>
+  <tbody>
+    <tr>
+      <th>Latitude</th>
+      <th>Longitude</th>
+    </tr>
+
+    <% @trail.trail_points.each do |trail_point| %>
+    <tr>
+      <td><%=h trail_point.lat %></td>
+      <td><%=h trail_point.long %></td>
+      <td><%= link_to 'Show', url_for([@trail, trail_point]) %></td>
+      <td><%= link_to 'Edit', url_for([@trail, trail_point]) %></td>
+      <td><%= link_to 'Destroy', url_for([@trail, trail_point]), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+    <% end %>
+  <tbody>
+</table>
+<% end %>
+
 <%= link_to 'Show', @trail %> |
 <%= link_to 'Back', trails_path %>

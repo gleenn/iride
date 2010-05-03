@@ -27,6 +27,12 @@ class TrailPointsController < ApplicationController
   
   def create
     @trail_point = TrailPoint.create!(params[:trail_point].merge(:trail_id => @trail.id))
+    redirect_to edit_trails_path(@trail)
+  end
+
+  def edit
+    @trail_point = TrailPoint.find_by_trail_id_and_id(@trail.id, params[:id])
+    render :template => :new
   end
   
   def destroy
@@ -34,13 +40,13 @@ class TrailPointsController < ApplicationController
       format.html do
         @trail_point = TrailPoint.find_by_trail_id_and_id(@trail.id, params[:id])
         @trail_point.destroy
-        redirect_to trails_path
+        redirect_to edit_trails_path(@trail)
       end
-      format.js do
-        jelly_callback do
-          
-        end
-      end
+      #format.js do
+      #  jelly_callback do
+      #    
+      #  end
+    end
   end
   
   protected
