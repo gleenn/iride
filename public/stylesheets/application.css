@@ -19,16 +19,17 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -4em;
+  margin: 0 auto -40px;
 }
 
 #footer, #push {
-  height: 4em;
   clear: both;
 }
 
 #footer {
   text-align: center;
+  border: 1px solid red;
+  height: 40px;
 }
 
 #content {
@@ -67,6 +68,10 @@ a:hover { color: #fff; background-color:#000; }
   padding: 2px;
   background-color: red;
   display: table;
+}
+
+#flash {
+  color: green;
 }
 
 #errorExplanation {

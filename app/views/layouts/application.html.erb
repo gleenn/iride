@@ -25,13 +25,13 @@
 <div id="container">
   <div id="content">
     <%= yield :header %>
-    <p style="color: green"><%= flash[:notice] %></p>
+    <p id="flash"><%= flash[:notice] %></p>
     <%= yield %>
   </div>
   <div class="push"></div>
 </div>
 <div id="footer">
-    All rights reserverd Glenn Jahnke, 2010.
+    All rights reserved Glenn Jahnke, 2010.
 </div>
 
 </body>
